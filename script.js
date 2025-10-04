@@ -190,41 +190,6 @@ function handlePhotoClick() {
     }, 2000);
 }
 
-function showPhotoMessage() {
-    const messages = [
-        "💖 Beautiful memory! 💖",
-        "🌟 Perfect for this special day! 🌟",
-        "💕 Such a lovely photo! 💕",
-        "✨ This photo brings so much joy! ✨"
-    ];
-    
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-    
-    const messageElement = document.createElement('div');
-    messageElement.innerHTML = randomMessage;
-    messageElement.style.cssText = `
-        position: fixed;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(255, 255, 255, 0.95);
-        color: #333;
-        padding: 15px 25px;
-        border-radius: 25px;
-        font-size: 1rem;
-        font-weight: 600;
-        z-index: 1000;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        animation: messageFloat 3s ease-in-out forwards;
-    `;
-    
-    document.body.appendChild(messageElement);
-    
-    setTimeout(() => {
-        messageElement.remove();
-    }, 3000);
-}
-
 // Balloon Effects
 function initializeBalloonEffects() {
     const balloons = document.querySelectorAll('.balloon');
@@ -339,34 +304,6 @@ function createBalloonConfetti(balloon) {
         setTimeout(() => {
             confetti.remove();
         }, 2000);
-    }
-}
-
-// Heart Particles for Photo
-function createHeartParticles() {
-    const photoFrame = document.querySelector('.photo-frame');
-    const rect = photoFrame.getBoundingClientRect();
-    
-    for (let i = 0; i < 20; i++) {
-        setTimeout(() => {
-            const heart = document.createElement('div');
-            heart.innerHTML = ['💖', '💕', '💗', '💓'][Math.floor(Math.random() * 4)];
-            heart.style.cssText = `
-                position: fixed;
-                left: ${rect.left + rect.width / 2}px;
-                top: ${rect.top + rect.height / 2}px;
-                font-size: 1.5rem;
-                pointer-events: none;
-                z-index: 1000;
-                animation: heartFloat 2s ease-out forwards;
-            `;
-            
-            document.body.appendChild(heart);
-            
-            setTimeout(() => {
-                heart.remove();
-            }, 2000);
-        }, i * 100);
     }
 }
 
