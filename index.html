@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOA HOE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="birthdaySong" loop preload="auto" autoplay>
+        <source src="assets/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="balloons">
+        <div class="balloon balloon1">🎈</div>
+        <div class="balloon balloon2">🎈</div>
+        <div class="balloon balloon3">🎈</div>
+        <div class="balloon balloon4">🎈</div>
+        <div class="balloon balloon5">🎈</div>
+        <div class="balloon balloon6">🎈</div>
+        <div class="balloon balloon7">🎈</div>
+        <div class="balloon balloon8">🎈</div>
+    </div>
+
+    <div class="confetti-container"></div>
+    <div class="container">
+        <header class="header">
+            <h1 class="birthday-title">
+                <span class="title-word">Happy</span>
+                <span class="title-word">Birthday!</span>
+            </h1>
+            <div class="sparkles">
+                <span class="sparkle">✨</span>
+                <span class="sparkle">⭐</span>
+                <span class="sparkle">✨</span>
+                <span class="sparkle">⭐</span>
+            </div>
+        </header>
+        <section class="interactive-section">
+            <div class="birthday-message">
+                <h2>Selamat Happy Birthday Ulang Tahun</h2>
+                <p>สุขสันต์วันเกิด</p>
+            </div>
+            
+            <div class="gifts-container">
+                <div class="gift gift1" onclick="openGift(1)">
+                    <div class="gift-box">🎁</div>
+                    <p>coba klik guwa</p>
+                </div>
+                <div class="gift gift2" onclick="openGift(2)">
+                    <div class="gift-box">🎁</div>
+                    <p>guwa juga</p>
+                </div>
+                <div class="gift gift3" onclick="openGift(3)">
+                    <div class="gift-box">🎁</div>
+                    <p>guwe juga donk</p>
+                </div>
+            </div>
+
+            <div class="cake-section">
+                <div class="cake" onclick="lightCandles()">
+                    <div class="cake-bottom">🍰</div>
+                    <div class="candles">
+                        <span class="candle">🕯️</span>
+                        <span class="candle">🕯️</span>
+                        <span class="candle">🕯️</span>
+                    </div>
+                </div>
+                <p class="cake-instruction">pencet en kue ne</p>
+            </div>
+        </section>
+
+        <section class="wishes-section">
+            <h3>Birthday Wishes</h3>
+            <div class="wishes-grid">
+                <div class="wish-card" onclick="animateWish(this)">
+                    <h4>Wish you all the best</h4>
+                </div>
+                <div class="wish-card" onclick="animateWish(this)">
+                    <h4>All Wish You The Best</h4>
+                </div>
+                <div class="wish-card" onclick="animateWish(this)">
+                    <h4>The You Best Wish All</h4>
+                </div>
+                <div class="wish-card" onclick="animateWish(this)">
+                    <h4>You Wish Best The All</h4>
+                </div>
+            </div>
+        </section>
+        <section class="photo-frame-section">
+            <h3>Loh sopo iki</h3>
+            <div class="photo-frame-container">
+                <div class="photo-frame">
+                    <div class="frame-border">
+                        <div class="photo-display" id="photoDisplay">
+                            <img src="assets/p.jpg" alt="Birthday Photo" id="birthdayPhoto">
+                            <div class="photo-overlay">
+                                <div class="photo-hearts">
+                                    <span class="heart-icon">😝</span>
+                                    <span class="heart-icon">😝</span>
+                                    <span class="heart-icon">😝</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <script src="script.js"></script>
+</body>
+</html>
