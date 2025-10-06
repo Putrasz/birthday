@@ -1,3 +1,7 @@
+alert("Happy Birthday Asha!");
+alert("Jujur ini hampir full AI, buat fun aja sih");
+alert("Anjay 18 tahun, semoga panjang umur dan sehat selalu, thank you ya sha udah percaya sama aku");
+
 const birthdaySong = document.getElementById("birthdaySong");
 const photoDisplay = document.getElementById("photoDisplay");
 const birthdayPhoto = document.getElementById("birthdayPhoto");
@@ -18,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function playBirthdaySong() {
-  birthdaySong.volume = 0.5;
+  birthdaySong.volume = 0.7;
 
   // Try to play immediately
   const playMusic = () => {
